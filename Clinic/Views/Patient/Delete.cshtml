@@ -1,0 +1,25 @@
+﻿@model Clinic.Models.Patient
+
+@{
+    ViewData["Title"] = "Delete Patient";
+}
+
+<h2>Delete Patient</h2>
+
+<h3>Are you sure you want to delete this patient?</h3>
+
+<div class="text-danger">@ViewData["ErrorMessage"]</div>    
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

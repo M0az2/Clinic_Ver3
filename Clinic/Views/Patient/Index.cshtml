@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Clinic.Models.Patient>
+
+@{
+    ViewData["Title"] = "Patients List";
+    Layout = "_Index";
+}
+@section Styles {
+    <link rel="stylesheet" href="/css/booked.css">
+    <title>Past Appointments - Harmony Medical Clinic</title>
+}
+
+
+
+
+<div class="container py-5">
+    <h2 class="text-center mb-4" style="color:white">Patients List</h2>
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px;">
+        
+        <div class="table-responsive">
+        <table class="table table-striped">
+                  @if (User.IsInRole("Admin"))
+            {    
+                <p>
+                    <a asp-action="Create" class="btn btn-success mb-3">Add New Patient</a>
+                   
+                </p>
+            }
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Age</th>
+                        <th>PhoneNum</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => p.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => p.Age)</td>
+                <td>@Html.DisplayFor(modelItem => p.PhoneNum)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@p.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@p.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+</div>
+</div>

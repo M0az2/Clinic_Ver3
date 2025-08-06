@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Clinic.Models.Appointment>
+@{
+    Layout = "_Index";
+    ViewData["Title"] = "Appointments";
+}
+
+
+@section Styles{
+    <link rel="stylesheet" href="/css/booked.css">
+    <title>Past Appointments - Harmony Medical Clinic</title>
+}
+
+
+
+<!-- Past Appointments Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4" style="color:white">Your Past Appointments</h2>
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px;">
+        <div class="table-responsive">
+            @if (User.IsInRole("Admin"))
+            {
+                <p>
+                    <a asp-action="Create" class="btn btn-success">Add New Appointment</a>
+                </p>
+            }
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Notes</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AppointmentDate.ToString("dd-MM-yyyy - HH:mm")</td>
+                            <td>@item.Patient.FullName</td>
+                            <td>@item.Doctor.FullName</td>
+                            <td>@(item.Notes?.Length > 50 ? item.Notes.Substring(0, 47) + "…" : item.Notes)</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                                @* hide edit and delete from doctor  *@
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                                }
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+      
+        </div>
+    </div>
+</div>

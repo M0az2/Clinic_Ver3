@@ -1,0 +1,79 @@
+﻿
+@model IEnumerable<Clinic.Models.Doctor>
+@if (User.IsInRole("Admin"))
+{
+
+
+
+    Layout = "_Index";
+
+
+
+
+
+    @section Styles {
+    <link rel="stylesheet" href="/css/booked.css">
+    <title>Past Appointments - Harmony Medical Clinic</title>
+                    }
+
+    @*Hide Add Doctor when the user is doctor*@
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4" style="color:white">Doctors List</h2>
+        <div style="background-color: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px;">
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+
+                    <a asp-controller="Doctor" asp-action="Create" class="btn btn-success mb-3">Add Doctor</a>
+
+
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Spec.</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var doc in Model)
+                        {
+                            <tr>
+                                <td>@doc.FullName</td>
+                                <td>@doc.Specialization</td>
+                                <td>@doc.Email</td>
+                                <td>@doc.PhoneNum</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@doc.Id" class="btn btn-sm btn-info">Details</a>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+
+
+                                        <a asp-action="Edit" asp-route-id="@doc.Id" class="btn btn-sm btn-warning">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@doc.Id" class="btn btn-sm btn-danger">Delete</a>
+
+                                    }
+
+                                    @*Hide Edit and Delete Doctor when the user is doctor*@
+
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+
+}
+
+
+
+
+                   

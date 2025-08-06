@@ -1,0 +1,119 @@
+﻿@model Clinic.Models.Appointment
+@{
+    Layout = "_Index";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="/css/book.css">
+    <title>Book an Appointment - Harmony Medical Clinic</title>
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4">Book an Appointment</h1>
+        <p class="lead">Schedule your visit with our healthcare professionals.</p>
+    </div>
+</section>
+<!-- Booking Form Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Appointment Booking Form</h2>
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="AppointmentDate" class="form-label">Preferred Date</label>
+            <input asp-for="AppointmentDate" class="form-control">
+            <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PatientId">Patient</label>
+            <select asp-for="PatientId" asp-items="ViewBag.Patients" class="form-control"></select>
+            <span asp-validation-for="PatientId" class="text-danger"></span>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="DoctorId">Doctor</label>
+            <select asp-for="DoctorId" asp-items="ViewBag.Doctors" class="form-control"></select>
+            <span asp-validation-for="DoctorId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Notes"></label>
+            <textarea asp-for="Notes" class="form-control"></textarea>
+            <span asp-validation-for="Notes" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Notes"></label>
+            <textarea asp-for="Notes" class="form-control"></textarea>
+            <span asp-validation-for="Notes" class="text-danger"></span>
+        </div>
+
+       
+        @* <div class="mb-3">
+            <label for="service" class="form-label">Select Service</label>
+            <select class="form-select" id="service" required>
+                <option selected disabled value="">Choose a service</option>
+                <option>General Medicine</option>
+                <option>Pediatrics</option>
+                <option>Dental Care</option>
+                <option>Cardiology</option>
+                <option>Physical Therapy</option>
+                <option>Nutrition Counseling</option>
+            </select>
+        </div> *@
+        @* <div class="mb-3">
+            <label for="date" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+        <div class="mb-3">
+            <label for="time" class="form-label">Preferred Time</label>
+            <input type="time" class="form-control" id="time" required>
+        </div> *@
+        @* <div class="mb-3">
+            <label for="message" class="form-label">Additional Notes</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+        </div> *@
+        <button type="submit" class="btn btn-primary w-100 mt-2">Book Appointment</button>
+        <a asp-action="Index" class="btn btn-secondary w-100 mt-2">Cancel</a>
+    </form>
+</div>
+
+
+@* <form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="AppointmentDate"></label>
+        <input asp-for="AppointmentDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PatientId">Patient</label>
+        <select asp-for="PatientId" asp-items="ViewBag.Patients" class="form-control"></select>
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DoctorId">Doctor</label>
+        <select asp-for="DoctorId" asp-items="ViewBag.Doctors" class="form-control"></select>
+        <span asp-validation-for="DoctorId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Notes"></label>
+        <textarea asp-for="Notes" class="form-control"></textarea>
+        <span asp-validation-for="Notes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form> *@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

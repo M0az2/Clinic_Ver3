@@ -1,0 +1,23 @@
+﻿@model Clinic.Models.Doctor
+
+<h2>Doctor Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Full Name</dt>
+        <dd class="col-sm-9">@Model.FullName</dd>
+        <dt class="col-sm-3">Age</dt>
+        <dd class="col-sm-9">@Model.Age</dd>
+        <dt class="col-sm-3">Specialization</dt>
+        <dd class="col-sm-9">@Model.Specialization</dd>
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+        <dt class="col-sm-3">Phone</dt>
+        <dd class="col-sm-9">@Model.PhoneNum</dd>
+        <dt class="col-sm-3">Working Hours</dt>
+        <dd class="col-sm-9">@Model.StartTime.ToString("hh\\:mm") – @Model.EndTime.ToString("hh\\:mm")</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

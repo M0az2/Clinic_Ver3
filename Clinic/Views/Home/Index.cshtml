@@ -1,0 +1,578 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Index";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/Style.css" />
+}
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Your Health is Our Top Priority</h1>
+                        <p class="lead mb-4">
+                            Comprehensive healthcare with a personal touch. Our expert team provides
+                            compassionate care using the latest medical technologies.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#appointment" class="btn btn-light btn-lg">Book Appointment</a>
+                            <a href="#services" class="btn btn-outline-light btn-lg">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400"
+                         alt="Smiling doctor consulting with patient in modern clinic setting"
+                         class="img-fluid d-none d-lg-block rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Expert Doctors</h4>
+                        <p>Board-certified physicians with years of experience and specialized training.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>24/7 Availability</h4>
+                        <p>Emergency services always available to address your urgent healthcare needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Quality Care</h4>
+                        <p>Committed to providing the highest standard of patient-centered care.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Compassionate</h4>
+                        <p>Treating each patient with dignity, respect, and genuine concern.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Features Section -->
+    <!-- Patients Section -->
+    <section class="py-5" id="patients">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Patient Portal</h2>
+                <p class="lead">Manage your health records and appointments</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>Appointments</h4>
+                        <p>View past appointments with your healthcare providers.</p>
+                        <a href="book.html" class="btn btn-outline-primary">Manage</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <h4>Medical Records</h4>
+                        <p>Access your test results, prescriptions and medical history.</p>
+                        <a href="#" class="btn btn-outline-primary">View Records</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Patient Support</h4>
+                        <p>Contact our support team for any questions or assistance you need.</p>
+                        <a href="#contact" class="btn btn-outline-primary">Get Help</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Patients Section -->
+    <!-- Services Section -->
+    <section class="py-5 bg-light-blue" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p class="lead">Comprehensive healthcare services to meet all your needs.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600"
+                             class="card-img-top" alt="General physician performing routine checkup in exam room">
+                        <div class="card-body">
+                            <h5 class="card-title">General Medicine</h5>
+                            <p class="card-text">
+                                Complete primary care services for patients of all ages, including
+                                preventive care, diagnosis and treatment of acute and chronic illnesses.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/829eeffb-a680-4846-a9cc-84a3d1c7df2f.png"
+                             class="card-img-top" alt="Dentist performing examination on patient with dental equipment">
+                        <div class="card-body">
+                            <h5 class="card-title">Dental Care</h5>
+                            <p class="card-text">
+                                Complete dental services including cleanings, fillings, crowns,
+                                bridges, extractions, and cosmetic dentistry procedures.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7313aacc-e1bd-4b34-adab-c11d83699a51.png"
+                             class="card-img-top" alt="Pediatrician examining young child with stethoscope">
+                        <div class="card-body">
+                            <h5 class="card-title">Pediatrics</h5>
+                            <p class="card-text">
+                                Specialized care for infants, children and adolescents, including
+                                well-child visits, immunizations, and treatment of childhood illnesses.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ba11809-9898-453b-9136-ee2321b722eb.png"
+                             class="card-img-top" alt="Cardiologist reviewing patient's ECG results on monitor">
+                        <div class="card-body">
+                            <h5 class="card-title">Cardiology</h5>
+                            <p class="card-text">
+                                Comprehensive heart care including diagnostic testing, treatment of
+                                heart conditions, and preventive cardiology services.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/27601fdf-7116-4b1d-9b20-c47139b6e154.png"
+                             class="card-img-top" alt="Physiotherapist helping patient with rehabilitation exercises">
+                        <div class="card-body">
+                            <h5 class="card-title">Physical Therapy</h5>
+                            <p class="card-text">
+                                Rehabilitation services to help patients recover from injuries,
+                                surgeries, or chronic conditions affecting movement and function.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6ff83d8a-b737-40df-8632-85a037ca74ea.png"
+                             class="card-img-top" alt="Nutritionist counseling patient about healthy eating habits">
+                        <div class="card-body">
+                            <h5 class="card-title">Nutrition Counseling</h5>
+                            <p class="card-text">
+                                Personalized nutrition plans and dietary guidance for weight
+                                management, chronic conditions, and overall wellness.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+    <!-- Doctors Section -->
+    <section class="py-5" id="doctors">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Doctors</h2>
+                <p class="lead">Meet our team of experienced healthcare professionals.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600"
+                             class="card-img-top doctor-img"
+                             alt="Dr. Sarah Johnson, experienced general physician smiling confidently">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dr. Sarah Johnson</h5>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-muted">General Physician</p>
+                            <p>
+                                With over 15 years of experience, Dr. Johnson specializes in preventive care and chronic
+                                disease management.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/00c1440e-98ad-4471-853f-cfe07d455b20.png"
+                             class="card-img-top doctor-img"
+                             alt="Dr. Michael Chen, pediatrician holding baby dummy in clinic">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dr. Michael Chen</h5>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-muted">Pediatrician</p>
+                            <p>
+                                Dr. Chen brings warmth and expertise to children's health with 12 years of pediatric
+                                experience.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01b21d7b-c660-418d-9dcf-16bef6357d8b.png"
+                             class="card-img-top doctor-img"
+                             alt="Dr. Rebecca Williams, female dentist posing in clinical attire">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dr. Rebecca Williams</h5>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-muted">Dentist</p>
+                            <p>
+                                Specializing in cosmetic and restorative dentistry, Dr. Williams provides gentle, quality
+                                dental care.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="doctor-card">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5c92809-686c-4a49-98a8-123c959198d5.png"
+                             class="card-img-top doctor-img"
+                             alt="Dr. James Rodriguez, senior cardiologist analyzing heart scan">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dr. James Rodriguez</h5>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-muted">Cardiologist</p>
+                            <p>
+                                With 20 years in cardiology, Dr. Rodriguez is renowned for his expertise in heart disease
+                                prevention.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Doctors Section -->
+    <!-- Appointment Section -->
+    <section class="py-5 bg-light-blue" id="appointment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-5">
+                        <h2 class="section-title">Book an Appointment</h2>
+                        <p class="lead">Schedule your visit with our healthcare professionals.</p>
+                        <p>
+                            Our patient scheduling system allows you to conveniently book appointments online. Simply
+                            fill out the form and our staff will confirm your appointment shortly.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone-alt mt-1"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+01012345678</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>project@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div>
+                                <h5>Working Hours</h5>
+                                <p>Monday - Friday: 8:00 AM - 7:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="service" class="form-label">Service</label>
+                                <select class="form-select" id="service" required>
+                                    <option selected disabled value="">Select a service</option>
+                                    <option>General Medicine</option>
+                                    <option>Pediatrics</option>
+                                    <option>Dental Care</option>
+                                    <option>Cardiology</option>
+                                    <option>Physical Therapy</option>
+                                    <option>Nutrition Counseling</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Notes</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Appointment Section -->
+    <!-- Contact Section -->
+    <section class="py-5 bg-light-blue mt-4" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div>
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="lead">We're here to answer your questions</p>
+                        <p>
+                            Whether you have questions about our services, want to schedule an appointment, or need
+                            directions to our clinic, our friendly staff is ready to assist you.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Nasr city, Abbas elakkad street</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone-alt mt-1"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>01012345678/p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>project@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appointment-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="contact-name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="contact-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contact-email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="contact-subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea class="form-control" id="contact-message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <!-- Login Modal-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span id="loginRoleTitle">Patient</span> Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="hidden" id="loginRole" name="role">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span id="signupRoleTitle">Patient</span> Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="hidden" id="signupRole" name="role">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Signup Modal -->
+@section Scripts{
+
+    <script>
+        // Handle role-based login/signup modal role setting
+        document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+            item.addEventListener('click', function () {
+                // Determine if login or signup
+                const text = this.textContent.trim();
+                let type = 'login';
+                if (text.toLowerCase().includes('sign up')) type = 'signup';
+                // Extract role
+                let role = text.replace(' Login', '').replace(' Sign Up', '').trim();
+                // Set modal fields if present
+                const roleInput = document.getElementById(`${type}Role`);
+                const roleTitle = document.getElementById(`${type}RoleTitle`);
+                if (roleInput) roleInput.value = role.toLowerCase();
+                if (roleTitle) roleTitle.textContent = role;
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Form submitted successfully! We will contact you shortly.');
+                this.reset();
+            });
+        });
+
+        // Sticky navbar background change on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-light');
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('bg-light');
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+
+}

@@ -1,0 +1,30 @@
+﻿@model Clinic.Models.Appointment
+@{
+    ViewData["Title"] = "Appointment Details";
+}
+
+<h2>Appointment Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Appointment Date</dt>
+    <dd class="col-sm-9">@Model.AppointmentDate.ToString("yyyy-MM-dd HH:mm")</dd>
+
+    <dt class="col-sm-3">Patient</dt>
+    <dd class="col-sm-9">@Model.Patient.FullName</dd>
+
+    <dt class="col-sm-3">Doctor</dt>
+    <dd class="col-sm-9">@Model.Doctor.FullName</dd>
+
+    <dt class="col-sm-3">Notes</dt>
+    <dd class="col-sm-9">@Model.Notes</dd>
+</dl>
+
+<p>
+    @*hide from doctor *@
+   @if(User.IsInRole("Admin"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    }
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</p>

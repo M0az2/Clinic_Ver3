@@ -1,0 +1,15 @@
+﻿body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/signup.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.9); /* light background inside card */
+    color: #000; /* make text readable inside card */
+}
+
+a {
+    color: #007bff;
+}
